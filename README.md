@@ -17,3 +17,12 @@
 -  There are two references contained within each node: a reference to the next node, as well as the previous node. This can be helpful if we wanted to be able to traverse our data structure not just in a single track or direction, but also backwards, too.
 #### circular linked list : 
 - linked list where all nodes are connected to form a circle. There is no NULL at the end. A circular linked list can be a singly circular linked list or doubly circular linked list. 
+
+## Big O Notation 😄 
+- Inserting at start O(1)
+- Inserting at end O(n)
+
+# A linked list is usually efficient when it comes to adding and removing most elements, but can be very slow to search and find a single element.
+
+
+
