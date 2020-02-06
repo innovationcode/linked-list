@@ -15,7 +15,7 @@ class Linkedlist:
     # 1. Insert at start O(1)
     # 2. Insert at some position
     # 3. Inset at the end O(n)
-    def insert_at_start(data):
+    def insert_at_start(self, data):
         node_to_insert = Node(data)
         if self.head == None:
             self.head = node_to_insert
@@ -61,6 +61,27 @@ class Linkedlist:
             current.next = node_to_insert
         return self.head
 
+    def print_list(self):
+        if self.head == None:
+            return 
+        else: 
+            temp = self.head
+            while temp is not None:
+                print(temp.data, end = " -> ")
+                temp = temp.next
 
+
+if __name__ == "__main__":
+
+    print("LINKED  LIST...")
+    ll = Linkedlist()
+    ll.insert_at_end(10)
+    ll.insert_at_end(20)
+    ll.insert_at_end(30)
+    ll.insert_at_end(20)
+    ll.insert_at_end(10)
+    ll.insert_at_start(250)
+    ll.insert_in_between(880, 4)
+    ll.print_list()
     
     
