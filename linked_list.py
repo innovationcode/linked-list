@@ -48,7 +48,18 @@ class Linkedlist:
         
         return self.head
 
-    
+    def insert_at_end(self, data):    
+        node_to_insert = Node(data)
+        if(self.head is None):
+            self.head = node_to_insert
+
+        elif(self.head is not None):
+            current = self.head
+            while current.next:
+                current = current.next
+                
+            current.next = node_to_insert
+        return self.head
 
 
     
