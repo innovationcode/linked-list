@@ -70,6 +70,18 @@ class Linkedlist:
                 print(temp.data, end = " -> ")
                 temp = temp.next
 
+    def reverse_ll(self):
+        current = self.head
+        prev_node = None
+
+        while current:
+            next_node = current.next
+            current.next = prev_node
+            prev_node = current
+            current = next_node
+
+        self.head = prev_node
+        return self.head
 
 if __name__ == "__main__":
 
@@ -82,6 +94,9 @@ if __name__ == "__main__":
     ll.insert_at_end(10)
     ll.insert_at_start(250)
     ll.insert_in_between(880, 4)
-    ll.print_list()
-    
-    
+    ll.print_list()  # O/P :-- 250 -> 10 -> 20 -> 30 -> 800 -> 20 -> 10 
+    ll.reverse_ll()
+    print("\nREVERSED  :\n")
+    ll.print_list() # O/P after reversing :-- 10 -> 20 -> 880 -> 30 -> 20 -> 10 -> 250 -> 
+
+ 
