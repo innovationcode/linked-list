@@ -115,7 +115,16 @@ class Linkedlist:
             second_list = next_ref
         second_list = prev_node
 
-        
+        #Comparing 
+        temp = self.head
+        while(temp and second_list):
+            if(temp.data == second_list.data):
+                continue
+            else: 
+                return 'Not Palindrome'
+            temp = temp.next
+            second_list = second_list.next
+        return 'Palindrome'
         
         
 
