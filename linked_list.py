@@ -103,7 +103,20 @@ class Linkedlist:
             elif p is None: # to check linked list is even
                 second_list = q.next
                 break
+            q = q.next
+        q.next = None
 
+        # Reversing second list
+        prev_node = None
+        while(second_list):
+            next_ref = second_list.next 
+            second_list.next = prev_node
+            prev_node = second_list
+            second_list = next_ref
+        second_list = prev_node
+
+        
+        
         
 
         
