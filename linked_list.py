@@ -82,6 +82,32 @@ class Linkedlist:
 
         self.head = prev_node
         return self.head
+    
+    def check_palindrome(self):
+        """
+        1. Split the linked list in middle
+        2. Prepare two linked lists.
+        3. If odd, ignore the middle node 
+        4. Reverse the second linked list
+        5. Compare the two linked lists
+        """
+        ## Splitting of Linked list
+        p = self.head
+        q = self.head
+        while(p):
+            p = p.next.next
+            #to check linked list is odd
+            if p.next is None:
+                second_list = q.next.next 
+                break
+            elif p is None: # to check linked list is even
+                second_list = q.next
+                break
+
+        
+
+        
+
 
 if __name__ == "__main__":
 
