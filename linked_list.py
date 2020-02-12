@@ -126,7 +126,24 @@ class Linkedlist:
             second_list = second_list.next
         return 'Palindrome'
         
-        
+    def list_length(self):
+        length = 0
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+            length += 1
+        return length +1  
+    
+    
+    def removeDuplicates(self):
+        current = self.head
+        while current.next:
+            if current.data == current.next.data:
+                new_jump_node = current.next.next
+                current.next = new_jump_node
+            else:
+                current = current.next 
+        return self.head
 
         
 
@@ -142,9 +159,10 @@ if __name__ == "__main__":
     ll.insert_at_end(10)
     ll.insert_at_start(250)
     ll.insert_in_between(880, 4)
-    ll.print_list()  # O/P :-- 250 -> 10 -> 20 -> 30 -> 800 -> 20 -> 10 
+    ll.print_list()  # O/P :-- 250 -> 10 -> 20 -> 30 -> 800 -> 20 -> 10
+    print("\nList length  : ",ll.list_length()) 
     ll.reverse_ll()
-    print("\nREVERSED  :\n")
+    print("\nREVERSED  : ")
     ll.print_list() # O/P after reversing :-- 10 -> 20 -> 880 -> 30 -> 20 -> 10 -> 250 -> 
 
  
