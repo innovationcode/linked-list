@@ -144,6 +144,21 @@ class Linkedlist:
             else:
                 current = current.next 
         return self.head
+    
+    def has_cycle(self):
+        if self.head is None:
+            return self.head
+        
+        current = self.head
+        s = set()
+        while current.next:
+            if current in s:
+                return True
+            else:
+                s.add(current)
+            current = current.next
+            
+        return False
 
         
 
